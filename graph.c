@@ -27,10 +27,10 @@ int is_equal_string(void *key1, void *key2) {
  * ========================================= */
 
 Graph* createGraph() {
-    Graph* grafo = malloc(sizeof(Graph));
-    grafo->adjacencyMap = NULL;
-    return grafo;
-    //return NULL;
+    //Graph* grafo = malloc(sizeof(Graph));
+    //grafo->adjacencyMap = NULL;
+    //return grafo;
+    return NULL;
 }
 
 void addNode(Graph* g, const char* label) {
@@ -45,7 +45,7 @@ void addNode(Graph* g, const char* label) {
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
     if (!g || !src || !dest) return;
-
+    
 }
 
 List* getEdges(Graph* g, const char* label) {
