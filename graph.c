@@ -28,6 +28,7 @@ int is_equal_string(void *key1, void *key2) {
 
 Graph* createGraph() {
     Graph* grafo = malloc(sizeof(Graph));
+    if (!grafo) return NULL;
     grafo->adjacencyMap = NULL;
     return grafo;
 }
