@@ -53,12 +53,10 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     Edge* aux = list_first(lista);
     while (aux != NULL){
         if (strcmp(aux->target, label2) == 0){
-            printf("se encontro");
             return aux->weight;
         }
         aux = list_next(lista);
     }
-    printf("No se encontro");
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
 }
