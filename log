@@ -175,3 +175,16 @@ Fri May 15 07:12:40 PM UTC 2026:
  1 file changed, 1 insertion(+)
  tests:  0|0
 e19b9ca
+Fri May 15 07:14:01 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:24: error: returning ‘int’ from a function with return type ‘Graph *’ makes pointer from integer without a cast [-Wint-conversion]
+   31 |     if (!grafo) return -1;
+      |                        ^
+graph.c:32:25: error: assignment to ‘Map *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   32 |     grafo->adjacencyMap = -1;
+      |                         ^
+da361b3
