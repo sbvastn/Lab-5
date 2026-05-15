@@ -128,3 +128,14 @@ map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *
       |                               ~~~~~~^~~
 cc1: all warnings being treated as errors
 2797fe1
+Fri May 15 07:08:36 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:45:35: error: ‘Graph’ has no member named ‘adjencyMap’; did you mean ‘adjacencyMap’?
+   45 |     MapPair* pair = map_search(g->adjencyMap, (void*)label);
+      |                                   ^~~~~~~~~~
+      |                                   adjacencyMap
+2f8328d
