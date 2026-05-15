@@ -6,3 +6,26 @@ Fri May  8 10:07:21 PM UTC 2026:
  tests:  0|6
 ========================================
 36e8bf5
+Fri May 15 06:49:21 PM UTC 2026: 
+ graph.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:51:31: error: ‘label’ undeclared (first use in this function); did you mean ‘label2’?
+   51 |     List *lista = getEdges(g, label 1);
+      |                               ^~~~~
+      |                               label2
+graph.c:51:31: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:51:36: error: expected ‘)’ before numeric constant
+   51 |     List *lista = getEdges(g, label 1);
+      |                           ~        ^~
+      |                                    )
+graph.c:54:42: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   54 |         if (is_equal_string(aux->target, label2)){
+      |                                          ^~~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+cc1: all warnings being treated as errors
+7252491
