@@ -213,3 +213,15 @@ graph.c:40:11: error: unused variable ‘list’ [-Werror=unused-variable]
       |           ^~~~
 cc1: all warnings being treated as errors
 c948c29
+Fri May 15 07:22:45 PM UTC 2026: 
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:41:5: error: expected ‘,’ or ‘;’ before ‘list_puchBack’
+   41 |     list_puchBack(g, strdup(label), list);
+      |     ^~~~~~~~~~~~~
+graph.c:40:11: error: unused variable ‘list’ [-Werror=unused-variable]
+   40 |     List* list = list_create()
+      |           ^~~~
+cc1: all warnings being treated as errors
+860f321
