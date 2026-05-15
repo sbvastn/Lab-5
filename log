@@ -236,3 +236,26 @@ graph.c:41:5: error: implicit declaration of function ‘list_puchBack’; did y
       |     ^~~~~~~~~~~~~
       |     list_pushBack
 2244769
+Fri May 15 07:23:06 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:41:19: error: passing argument 1 of ‘list_pushBack’ from incompatible pointer type [-Wincompatible-pointer-types]
+   41 |     list_pushBack(g, strdup(label), list);
+      |                   ^
+      |                   |
+      |                   Graph *
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:20:26: note: expected ‘List *’ but argument is of type ‘Graph *’
+   20 | void list_pushBack(List *L, void *dato);
+      |                    ~~~~~~^
+graph.c:41:5: error: too many arguments to function ‘list_pushBack’
+   41 |     list_pushBack(g, strdup(label), list);
+      |     ^~~~~~~~~~~~~
+list.h:20:6: note: declared here
+   20 | void list_pushBack(List *L, void *dato);
+      |      ^~~~~~~~~~~~~
+a839d71

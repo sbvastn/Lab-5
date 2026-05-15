@@ -38,7 +38,7 @@ void addNode(Graph* g, const char* label) {
     MapPair* pair = map_search(g->adjacencyMap, (void*) label);
     if (pair) return;
     List* list = list_create();
-    list_puchBack(g, strdup(label), list);
+    list_pushBack(g, strdup(label), list);
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
