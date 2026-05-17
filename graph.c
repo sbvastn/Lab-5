@@ -82,6 +82,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
     List* list = getEdges(g, label);
+    if (!list) return NULL;
     List* newlist = list_create();
     Edge* aux = list_first(list);
     while (aux != NULL){
